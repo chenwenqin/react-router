@@ -64,9 +64,11 @@ export function useQueryString() {
 
   const search = useLocation().search;
   const searchParams = new URLSearchParams(search);
-  const queryObject = {};
-  searchParams.forEach(function(v, k, p) {
-    queryObject[k] = v;
-  });
-  return queryObject;
+  return React.useMemo(() => {
+    const queryObject = {};
+    searchParams.forEach(function(v, k, p) {
+      queryObject[k] = v;
+    });
+    return queryObject;
+  }, [searchParams]);
 }
