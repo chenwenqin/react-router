@@ -154,11 +154,11 @@ const match = useRouteMatch({
 });
 ```
 
-<a id="useQueryString" />
+<a id="useQueryParams" />
 
-## `useQueryString`
+## `useQueryParams`
 
-`useQueryString` returns an object of key/value pairs of URL queryString. Use it to access `location.search` of the current `<Route>`.
+`useQueryParams` returns an object of key/value pairs of URL queryString. Use it to access `location.search` of the current `<Route>`.
 
 ```jsx
 import React from "react";
@@ -167,12 +167,16 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  useQueryString
+  useQueryParams
 } from "react-router-dom";
 
 function BlogPost() {
-  let { page, pageSize } = useQueryString();
-  return <div>Now showing page: {page}, {pageSize}</div>;
+  let { page, pageSize } = useQueryParams();
+  return (
+    <div>
+      Now showing page: {page}, {pageSize}
+    </div>
+  );
 }
 
 ReactDOM.render(
@@ -188,3 +192,4 @@ ReactDOM.render(
   </Router>,
   node
 );
+```

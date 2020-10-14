@@ -13,7 +13,7 @@ export {
   useLocation,
   useParams,
   useRouteMatch,
-  useQueryString
+  useQueryParams
 } from "react-router";
 
 export { default as BackButton } from "./BackButton.js";

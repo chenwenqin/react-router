@@ -35,4 +35,10 @@ export { default as withRouter } from "./withRouter.js";
 export { default as __HistoryContext } from "./HistoryContext.js";
 export { default as __RouterContext } from "./RouterContext.js";
 
-export { useHistory, useLocation, useParams, useRouteMatch, useQueryString } from "./hooks.js";
+export {
+  useHistory,
+  useLocation,
+  useParams,
+  useRouteMatch,
+  useQueryParams
+} from "./hooks.js";

@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { MemoryRouter, Route, useQueryString } from "react-router";
+import { MemoryRouter, Route, useQueryParams } from "react-router";
 
 import renderStrict from "./utils/renderStrict.js";
 
-describe("useQueryString", () => {
+describe("useQueryParams", () => {
   const node = document.createElement("div");
 
   afterEach(() => {
@@ -16,7 +16,7 @@ describe("useQueryString", () => {
       let queryObject;
 
       function HomePage() {
-        queryObject = useQueryString();
+        queryObject = useQueryParams();
         return null;
       }
 
@@ -39,7 +39,7 @@ describe("useQueryString", () => {
       let queryObject;
 
       function BlogPost() {
-        queryObject = useQueryString();
+        queryObject = useQueryParams();
         return null;
       }
 
@@ -67,7 +67,7 @@ describe("useQueryString", () => {
       let queryObject;
 
       function HomePage() {
-        queryObject = useQueryString();
+        queryObject = useQueryParams();
         return null;
       }
 

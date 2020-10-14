@@ -54,7 +54,7 @@ export function useRouteMatch(path) {
   return path ? matchPath(location.pathname, path) : match;
 }
 
-export function useQueryString() {
+export function useQueryParams() {
   if (__DEV__) {
     invariant(
       typeof useContext === "function",
